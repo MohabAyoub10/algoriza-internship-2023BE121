@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "xOVexeY5btvMovOe/K4yVAL2yfw4Y7Ul7tcLzJheaBAo89JXKNVO1GFlIQf0sOgSycHC3DY5Iwk7OrdRl5AGJA==",
+  "success": true,
+  "projectFilePath": "D:\\Vezeeta\\Core\\Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mohab\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\mohab\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\mohab\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}
