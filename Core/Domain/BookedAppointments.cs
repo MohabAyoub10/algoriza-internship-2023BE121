@@ -2,7 +2,7 @@
 
 namespace Core.Domain
 {
-    internal class BookedAppointments
+    public class BookedAppointments
     {
         public int Id { get; set; }
         public string PatientId { get; set; }

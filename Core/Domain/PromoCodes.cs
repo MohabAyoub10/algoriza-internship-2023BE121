@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Core.Domain
 {
-    internal class PromoCodes
+    public class PromoCodes
     {
         public int Id { get; set; }
         [Required(ErrorMessage ="Name is required.")]

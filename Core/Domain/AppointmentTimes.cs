@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.Domain
 {
-    internal class AppointmentTimes
+    public class AppointmentTimes
     {
         public int Id { get; set; }
         public DateTime Time { get; set; }

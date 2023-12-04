@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Core.Domain
 {
-    internal class ApplicationUser: IdentityUser
+    public class ApplicationUser: IdentityUser
     {
         [Required]
         public string FullName { get; set; }

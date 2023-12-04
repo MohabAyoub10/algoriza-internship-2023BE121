@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.Domain
 {
-    internal class DoctorAppointmentDetails
+    public class DoctorAppointmentDetails
     {
         public int Id { get; set; }
         public DoctorSchedule DoctorSchedule { get; set; }

@@ -2,7 +2,7 @@
 
 namespace Core.Domain
 {
-    internal class DoctorSchedule
+    public class DoctorSchedule
     {
         public int Id { get; set; }
         public int DoctorId { get; set; }

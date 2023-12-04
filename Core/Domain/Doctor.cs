@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Core.Domain
 {
-    internal class Doctor
+    public class Doctor
     {
         public int UserId { get; set; }
         public ApplicationUser ApplicationUser { get; set; }
