@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Core.Domain
 {
-    internal class Specialties
+    public class Specialties
     {
         public int Id { get; set; }
         [Required]
