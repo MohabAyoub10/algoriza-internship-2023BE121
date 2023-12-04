@@ -13,9 +13,9 @@ namespace Core.Domain
         public int AppointmentTimesId { get; set; }
         public AppointmentTimes AppointmentTimes { get; set; }
         public BookingStatus bookingStatus { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public int PromoCodeId { get; set; }
-        public PromoCodes PromoCode { get; set; }
+        public DateTime CreatedAt  = DateTime.Now;
+        public int? PromoCodeId { get; set; }
+        public PromoCodes? PromoCode { get; set; }
 
 
     }
