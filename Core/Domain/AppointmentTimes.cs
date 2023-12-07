@@ -9,7 +9,7 @@ namespace Core.Domain
     public class AppointmentTimes
     {
         public int Id { get; set; }
-        public DateTime Time { get; set; }
+        public TimeSpan Time { get; set; }
         public int DoctorScheduleId { get; set; }
         public DoctorSchedule DoctorSchedule { get; set; }
     }
