@@ -365,3 +365,6 @@ migrations
 FodyWeavers.xsd
 *.png
 *.jpg
+
+# Ignore obj folder
+**/obj/
