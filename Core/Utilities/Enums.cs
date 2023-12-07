@@ -13,9 +13,9 @@
 
     public enum BookingStatus
     {
+        Cancelled,
         Pending,
         Completed,
-        Cancelled
     }
 
     public enum Gender
@@ -32,13 +32,13 @@
 
     public enum UserType
     {
-        Patient,
         Admin,
-        Doctor
+        Doctor,
+        Patient,
     }
     public enum ActivationStatus
     {
-        Active,
-        Inactive
+        Inactive,
+        Active
     }
 }
