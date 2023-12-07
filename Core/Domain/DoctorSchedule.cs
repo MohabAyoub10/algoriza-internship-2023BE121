@@ -1,4 +1,8 @@
 ﻿using Core.Utilities;
+using Newtonsoft.Json.Converters;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Core.Domain
 {
@@ -9,6 +13,6 @@ namespace Core.Domain
         public Doctor Doctor { get; set; }
         public Day DayOfWeek { get; set; }
         public ActivationStatus AppointmentStatus { get; set; }
-        public List<AppointmentTimes> AppointmentTimes { get; set; }
+        public List<AppointmentTimes>? AppointmentTimes { get; set; }
     }
 }
