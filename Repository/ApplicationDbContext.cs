@@ -15,12 +15,20 @@ namespace Repository
 
             modelBuilder.Entity<BookedAppointments>()
                 .HasOne(b => b.Patient)
-                .WithMany(p => p.Appointments)
+                .WithMany()
+                .HasForeignKey(b => b.PatientId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<BookedAppointments>()
                 .HasOne(b => b.Doctor)
-                .WithMany(d => d.Appointments)
+                .WithMany()
+                .HasForeignKey(b => b.DoctorId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<BookedAppointments>()
+                .HasOne(b => b.AppointmentTime)
+                .WithMany()
+                .HasForeignKey(b => b.AppointmentTimeId)
                 .OnDelete(DeleteBehavior.Restrict);
             modelBuilder.Entity<Specialties>().HasData(
                 new Specialties
