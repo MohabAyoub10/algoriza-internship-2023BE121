@@ -20,7 +20,7 @@ namespace Core.Domain
         [Required(ErrorMessage = "Price is required.")]
         [DefaultValue(0.0)]
         public float Price { get; set; }
-
+        [DefaultValue(0)]
         public int NoOfRequests { get; set; }
         [Range(0, 5)]
         public int rating { get; set; }
