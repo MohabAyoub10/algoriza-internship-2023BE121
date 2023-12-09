@@ -12,6 +12,7 @@ namespace Core.Repository
         IAppointmentRepository Appointments { get; }
         IBaseRepository<AppointmentTimes> TimeSlots { get; }
         IDoctorRepository Doctors { get; }
+        IApplicationUserRepository ApplicationUsers { get; }
 
         void Save();
     }
