@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Core.Domain;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Repository
 {
@@ -17,9 +18,19 @@ namespace Repository
             _context = context;
         }
 
-        public void Add(DoctorSchedule entity)
+
+        public async Task<IActionResult> Add(DoctorSchedule entity)
         {
-            _context.DoctorSchedules.Add(entity);
+            try
+            {
+
+                _context.DoctorSchedules.Add(entity);
+                return new OkObjectResult(entity);
+            }
+            catch (Exception ex)
+            {
+                return new BadRequestObjectResult(ex.Message);
+            }
         }
         public void AddRange(IEnumerable<DoctorSchedule> entities)
         {
