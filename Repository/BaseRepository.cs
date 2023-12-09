@@ -1,7 +1,9 @@
 ﻿using Core.Repository;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,9 +18,17 @@ namespace Repository
         }
 
 
-        public void Add(T entity)
+        public async Task<IActionResult> Add(T entity)
         {
-            _context.Set<T>().Add(entity);
+            try
+            {
+                _context.Set<T>().Add(entity);
+                return new OkObjectResult(entity);
+            }
+            catch (Exception ex)
+            {
+                return new BadRequestObjectResult(ex.Message);
+            }
         }
 
         public void AddRange(IEnumerable<T> entities)
@@ -40,6 +50,7 @@ namespace Repository
             throw new NotImplementedException();
         }
 
+
         public T GetById(int Id)
         {
             throw new NotImplementedException();
@@ -58,6 +69,5 @@ namespace Repository
         {
             _context.Set<T>().UpdateRange(entities);
         }
-
     }
 }
