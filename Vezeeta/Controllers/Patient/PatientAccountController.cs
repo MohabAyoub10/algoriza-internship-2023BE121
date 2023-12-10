@@ -12,13 +12,13 @@ namespace Vezeeta.Controllers.Patient
 {
     [Route("api/Account")]
     [ApiController]
-    public class AccountController : ControllerBase
+    public class PatientAccountController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IApplicationUserService _applicationUserService;
 
 
-        public AccountController(IUnitOfWork unitOfWork, IApplicationUserService applicationUserService)
+        public PatientAccountController(IUnitOfWork unitOfWork, IApplicationUserService applicationUserService)
         {
             _unitOfWork = unitOfWork;
             _applicationUserService = applicationUserService;

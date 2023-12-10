@@ -5,7 +5,7 @@ namespace Vezeeta.Controllers.Patient
 {
     [Route("api/appointment")]
     [ApiController]
-    public class AppointmentController : ControllerBase
+    public class PatientAppointmentController : ControllerBase
     {
         
     }

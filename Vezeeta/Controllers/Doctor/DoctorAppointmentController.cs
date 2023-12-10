@@ -9,13 +9,13 @@ namespace Vezeeta.Controllers.Doctor
 {
     [Route("api/schedules")]
     [ApiController]
-    public class AppointmentController : ControllerBase
+    public class DoctorAppointmentController : ControllerBase
     {
         internal protected IAppointmentService _appointmentService;
         protected IAppointmentTimeService _appointmentTimeService;
         private readonly ApplicationDbContext _context;
 
-        public AppointmentController(IAppointmentService appointmentService, ApplicationDbContext context, 
+        public DoctorAppointmentController(IAppointmentService appointmentService, ApplicationDbContext context, 
             
             IAppointmentTimeService appointmentTimeService
             ) { 
