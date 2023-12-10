@@ -20,6 +20,7 @@ namespace DependencyInjection
             services.AddTransient<IAppointmentTimeService, AppointmentTimeService>();
             services.AddTransient<IAppointmentService, AppointmentService>();
             services.AddTransient<IApplicationUserService, ApplicationUserService>();
+            services.AddTransient<IDoctorServices, DoctorService>();
             return services;
 
         }
