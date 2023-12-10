@@ -31,6 +31,7 @@ namespace Repository
             Appointments = new AppointmentRepository(_context);
             TimeSlots = new BaseRepository<AppointmentTimes>(_context);
             ApplicationUsers = new ApplicationUserRepository(_context, _userManager,_roleManager);
+            Doctors = new DoctorRepository(_context);
         }
 
 
