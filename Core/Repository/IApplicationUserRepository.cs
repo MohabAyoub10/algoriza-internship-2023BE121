@@ -13,5 +13,7 @@ namespace Core.Repository
         Task<bool> CheckPassword(ApplicationUser user, string password);
 
         Task<string> GetRole(ApplicationUser user);
+
+        ApplicationUser GetByUser(string patientId);
     }
 }

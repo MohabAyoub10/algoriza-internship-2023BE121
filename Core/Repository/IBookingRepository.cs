@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Core.Domain;
+using Core.DTO;
+using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +9,9 @@ using System.Threading.Tasks;
 
 namespace Core.Repository
 {
-    internal class BookingRepository
+    public interface IBookingRepository
     {
+        IActionResult AddBookAppointment(BookedAppointments appointment);   
+        List<BookedAppointmentDTO> GetAllBookedAppointments(string patientId);
     }
 }

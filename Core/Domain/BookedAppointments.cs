@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,10 +18,10 @@ namespace Core.Domain
         public DateTime CreatedAt =  DateTime.Now;
 
         public int? PromoCodeId { get; set; }
-        public ApplicationUser Patient { get; set; }
-        public Doctor Doctor { get; set; }
-        public AppointmentTimes AppointmentTime { get; set; }
-        public PromoCodes PromoCode { get; set; }
+        public ApplicationUser? Patient { get; set; }
+        public Doctor? Doctor { get; set; }
+        public AppointmentTimes? AppointmentTime { get; set; }
+        public PromoCodes? PromoCode { get; set; }
 
 
 

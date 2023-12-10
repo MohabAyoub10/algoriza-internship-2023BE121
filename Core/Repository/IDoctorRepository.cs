@@ -12,5 +12,8 @@ namespace Core.Repository
     public interface IDoctorRepository
     {
         IActionResult AllDoctorsInfoWithAppointment(int Page, int PageSize, Func<DoctorDTO, bool> criteria = null);
+        int GetDoctorId(int slotid);
+         Doctor GetByID(int id);
+
     }
 }

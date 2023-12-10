@@ -53,7 +53,7 @@ namespace Repository
 
         public T GetById(int Id)
         {
-            throw new NotImplementedException();
+            return _context.Set<T>().Find(Id);
         }
         public IEnumerable<T> GetAllById(int Id)
         {

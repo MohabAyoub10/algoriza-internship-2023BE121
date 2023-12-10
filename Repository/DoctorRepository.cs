@@ -23,6 +23,19 @@ namespace Repository
             _context = context;
         }
 
+        public Doctor GetByID(int id)
+        {
+            return _context.Doctors.FirstOrDefault(d => d.Id == id);
+        }
+        public int GetDoctorId(int slotid)
+        {
+            var doctorId = _context.AppointmentTimes
+                .Where(a => a.Id == slotid)
+                .Select(a => a.DoctorSchedule.DoctorId)
+                .FirstOrDefault();
+
+            return doctorId;
+        }
 
         public IActionResult AllDoctorsInfoWithAppointment(int Page, int PageSize, Func<DoctorDTO, bool>? criteria)
         {

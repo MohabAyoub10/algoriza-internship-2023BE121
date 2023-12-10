@@ -34,9 +34,19 @@ namespace Repository
             _context = context;
             _roleManager = roleManager;
         }
+
+        public ApplicationUser GetByUser(string patientId)
+        {
+            return _userManager.FindByIdAsync(patientId).Result;
+        }
         public async Task<IActionResult> Add(ApplicationUser entity)
         {
             var result = await _userManager.CreateAsync(entity, entity.PasswordHash);
+
+            if(!result.Succeeded)
+            {
+                return new BadRequestObjectResult(result.Errors);
+            }
 
             var role = Enum.GetName(typeof(UserType), entity.UserType);
 
@@ -46,7 +56,7 @@ namespace Repository
                 var Role = new IdentityRole(role);
                 await _roleManager.CreateAsync(Role);
             }
-
+            _context.SaveChanges();
             var resultRole = await _userManager.AddToRoleAsync(entity,role);
 
             if (result.Succeeded && resultRole.Succeeded)

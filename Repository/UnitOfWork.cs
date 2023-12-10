@@ -14,8 +14,12 @@ namespace Repository
         public IDoctorRepository Doctors { get; private set; }
         public IAppointmentRepository Appointments { get; private set; }
         public IBaseRepository<AppointmentTimes> TimeSlots { get; private set; }
+        public IBookingRepository Booking { get; private set; }
 
         public IApplicationUserRepository ApplicationUsers { get; private set; }
+
+        public IPromoCodesRepository PromoCodes { get; private set; }
+
 
 
 
@@ -32,6 +36,8 @@ namespace Repository
             TimeSlots = new BaseRepository<AppointmentTimes>(_context);
             ApplicationUsers = new ApplicationUserRepository(_context, _userManager,_roleManager);
             Doctors = new DoctorRepository(_context);
+            Booking = new BookingRepository(_context);
+            PromoCodes = new PromoCodesRepository(_context);
         }
 
 
