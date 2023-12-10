@@ -16,7 +16,7 @@ namespace Core.Domain
         public ApplicationUser ApplicationUser { get; set; }
 
         public int SpecialtiesId { get; set; }
-        public Specialties Specialties { get; set; }
+        public Specialties? Specialties { get; set; }
         [Required(ErrorMessage = "Price is required.")]
         [DefaultValue(0.0)]
         public float Price { get; set; }
