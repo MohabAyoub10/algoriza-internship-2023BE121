@@ -17,5 +17,12 @@ namespace Core.DTO
         public ActivationStatus AppointmentStatus { get; set; }
     }
 
-    
+
+    public class  AppointmentTimeDTO
+    {
+        public string Day;
+        public List<string> Slots;
+    }
+
+
 }
